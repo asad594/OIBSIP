@@ -246,22 +246,35 @@ public class NumberGuessingGame extends JFrame {
                 Graphics2D g2 = (Graphics2D) g.create();
                 g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-                int alphaFill = hover ? 235 : 200;
-                Color fill = new Color(accent.getRed(), accent.getGreen(), accent.getBlue(), isEnabled() ? alphaFill : 90);
+                // Always solid, prominent fill (slightly dimmer when disabled, never faint)
+                int alphaFill = hover ? 255 : (isEnabled() ? 230 : 170);
+                Color fill = new Color(accent.getRed(), accent.getGreen(), accent.getBlue(), alphaFill);
                 g2.setColor(fill);
                 g2.fill(new RoundRectangle2D.Float(0, 0, getWidth(), getHeight(), 16, 16));
 
                 // glass shine on top half
-                GradientPaint shine = new GradientPaint(0, 0, new Color(255, 255, 255, 70), 0, getHeight(), new Color(255, 255, 255, 0));
+                GradientPaint shine = new GradientPaint(0, 0, new Color(255, 255, 255, 80), 0, getHeight(), new Color(255, 255, 255, 0));
                 g2.setPaint(shine);
                 g2.fill(new RoundRectangle2D.Float(0, 0, getWidth(), getHeight() / 2f, 16, 16));
 
-                g2.setColor(new Color(255, 255, 255, 90));
-                g2.setStroke(new BasicStroke(1.2f));
+                // Solid border always visible
+                g2.setColor(new Color(255, 255, 255, 160));
+                g2.setStroke(new BasicStroke(1.4f));
                 g2.draw(new RoundRectangle2D.Float(0.5f, 0.5f, getWidth() - 1, getHeight() - 1, 16, 16));
 
+                // Manually paint the text ourselves so it stays bright white
+                // even when the button is disabled (Swing normally fades disabled text to gray)
+                g2.setFont(getFont());
+                FontMetrics fm = g2.getFontMetrics();
+                String text = getText();
+                int textWidth = fm.stringWidth(text);
+                int textX = (getWidth() - textWidth) / 2;
+                int textY = (getHeight() - fm.getHeight()) / 2 + fm.getAscent();
+
+                g2.setColor(isEnabled() ? Color.WHITE : new Color(255, 255, 255, 220));
+                g2.drawString(text, textX, textY);
+
                 g2.dispose();
-                super.paintComponent(g);
             }
         };
         button.setFont(new Font("Segoe UI", Font.BOLD, 14));
