@@ -46,11 +46,19 @@ OIBSIP/[TrackName]-[Level/Task]-[ProjectName]/
 
 ```
 OIBSIP/
+├── Java-Task1-OnlineReservationSystem/
+│   ├── src/
+│   ├── README.md
+│   └── screenshots/
 ├── Java-Task2-NumberGuessingGame/
 │   ├── src/
 │   ├── README.md
 │   └── screenshots/
 ├── Java-Task3-ATMInterface/
+│   ├── src/
+│   ├── README.md
+│   └── screenshots/
+├── Java-Task4-OnlineExaminationSystem/
 │   ├── src/
 │   ├── README.md
 │   └── screenshots/
@@ -63,13 +71,13 @@ OIBSIP/
 
 | # | Task | Status | Tech Stack | Folder |
 |---|------|--------|------------|--------|
-| 1 | Online Reservation System | ⬜ Not Started | Java Swing, JDBC, MySQL/SQLite | — |
-| 2 | Number Guessing Game | ⬜ Not Started | Java, Scanner, Random | — |
-| 3 | ATM Interface | ⬜ Not Started | Java OOP, ArrayList | — |
-| 4 | Online Examination System | ⬜ Not Started | Java Swing, Timer | — |
-| 5 | Digital Library Management System | ⬜ Not Started | Java Servlets/Spring Boot, MySQL | — |
+| 1 | Online Reservation System | ⬜ Not Started | Java Swing, JDBC, MySQL/SQLite | [Java-Task1-OnlineReservationSystem](./Java-Task1-OnlineReservationSystem) |
+| 2 | Number Guessing Game | ⬜ Not Started | Java, Scanner, Random | [Java-Task2-NumberGuessingGame](./Java-Task2-NumberGuessingGame) |
+| 3 | ATM Interface | ⬜ Not Started | Java OOP, ArrayList | [Java-Task3-ATMInterface](./Java-Task3-ATMInterface) |
+| 4 | Online Examination System | ⬜ Not Started | Java Swing, Timer | [Java-Task4-OnlineExaminationSystem](./Java-Task4-OnlineExaminationSystem) |
+| 5 | Digital Library Management System | ⬛ Skipped | Java Servlets/Spring Boot, MySQL | — |
 
-> 🎯 **Completion Requirement:** Minimum **2 out of 5** tasks required for internship completion.
+> 🎯 **Completion Requirement:** Minimum **2 out of 5** tasks required — completing **4 tasks** for a stronger submission.
 
 ---
 
