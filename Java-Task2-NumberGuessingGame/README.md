@@ -37,7 +37,13 @@ A classic **Number Guessing Game**, reimagined with a modern **glassmorphism GUI
 
 <div align="center">
 
-![Gameplay Screenshot](./screenshots/gameplay.jpeg)
+| Main Menu | Hard Mode |
+|---|---|
+| ![Main Menu](./screenshots/Modes.jpeg) | ![Hard Mode](./screenshots/hard.jpeg) |
+
+| Win 🎉 | Lost 😢 |
+|---|---|
+| ![Win](./screenshots/win.jpeg) | ![Lost](./screenshots/lost.jpeg) |
 
 </div>
 
@@ -87,7 +93,10 @@ Java-Task2-NumberGuessingGame/
 ├── src/
 │   └── NumberGuessingGame.java
 ├── screenshots/
-│   └── gameplay.png
+│   ├── Modes.jpeg
+│   ├── win.jpeg
+│   ├── lost.jpeg
+│   └── hard.jpeg
 └── README.md
 ```
 
