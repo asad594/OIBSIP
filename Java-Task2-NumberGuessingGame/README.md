@@ -37,9 +37,7 @@ A classic **Number Guessing Game**, reimagined with a modern **glassmorphism GUI
 
 <div align="center">
 
-*Add your gameplay screenshot below!*
-
-![Gameplay Screenshot](./screenshots/gameplay.png)
+![Gameplay Screenshot](./screenshots/gameplay.jpeg)
 
 </div>
 
