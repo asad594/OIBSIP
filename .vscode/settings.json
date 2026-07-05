@@ -1,0 +1,5 @@
+{
+    "java.project.referencedLibraries": [
+        "Java-Task3-ATMInterface/lib/**/*.jar"
+    ]
+}
