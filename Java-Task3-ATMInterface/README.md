@@ -23,17 +23,22 @@ A console-based **ATM Machine Simulation** built in Java, featuring secure PIN a
 
 <div align="center">
 
-**Main Menu**
+#### Main Menu
+
 <img src="screenshots/main-menu.jpeg" alt="ATM Main Menu" width="600"/>
 
-<br/><br/>
+<br/>
+<br/>
 
-**Transaction Flow (Withdraw & Transfer)**
+#### Transaction Flow (Withdraw & Transfer)
+
 <img src="screenshots/transaction-demo.jpeg" alt="Transaction Demo" width="600"/>
 
-<br/><br/>
+<br/>
+<br/>
 
-**Database Persistence — Accounts & Transactions Tables (SQL Server)**
+#### Database Persistence — Accounts & Transactions Tables (SQL Server)
+
 <img src="screenshots/database-persistence.jpeg" alt="Database Persistence" width="600"/>
 
 </div>
