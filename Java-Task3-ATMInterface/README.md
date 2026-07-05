@@ -23,16 +23,20 @@ A console-based **ATM Machine Simulation** built in Java, featuring secure PIN a
 
 <div align="center">
 
-<!-- Replace the line below with your actual screenshot -->
-<img src="screenshots/main-menu.png" alt="ATM Main Menu" width="600"/>
+**Main Menu**
+<img src="screenshots/main-menu.jpeg" alt="ATM Main Menu" width="600"/>
 
 <br/><br/>
 
-<img src="screenshots/transaction-demo.png" alt="Transaction Demo" width="600"/>
+**Transaction Flow (Withdraw & Transfer)**
+<img src="screenshots/transaction-demo.jpeg" alt="Transaction Demo" width="600"/>
+
+<br/><br/>
+
+**Database Persistence — Accounts & Transactions Tables (SQL Server)**
+<img src="screenshots/database-persistence.jpeg" alt="Database Persistence" width="600"/>
 
 </div>
-
-> 📌 *Add your screenshots to the `screenshots/` folder and update the image paths above.*
 
 ---
 
