@@ -62,6 +62,10 @@ OIBSIP/
 │   ├── src/
 │   ├── README.md
 │   └── screenshots/
+├── Java-Task5-DigitalLibraryManagementSystem/
+│   ├── src/
+│   ├── README.md
+│   └── screenshots/
 └── README.md   ← (you are here)
 ```
 
@@ -73,11 +77,11 @@ OIBSIP/
 |---|------|--------|------------|--------|
 | 1 | Online Reservation System | ⬜ Not Started | Java Swing, JDBC, MySQL/SQLite | [Java-Task1-OnlineReservationSystem](./Java-Task1-OnlineReservationSystem) |
 | 2 | Number Guessing Game | ⬜ Not Started | Java, Scanner, Random | [Java-Task2-NumberGuessingGame](./Java-Task2-NumberGuessingGame) |
-| 3 | ATM Interface | ⬜ Not Started | Java OOP, ArrayList | [Java-Task3-ATMInterface](./Java-Task3-ATMInterface) |
-| 4 | Online Examination System | ⬜ Not Started | Java Swing, Timer | [Java-Task4-OnlineExaminationSystem](./Java-Task4-OnlineExaminationSystem) |
-| 5 | Digital Library Management System | ⬛ Skipped | Java Servlets/Spring Boot, MySQL | — |
+| 3 | ATM Interface | ✅ Complete | Java OOP, JDBC, SQL Server | [Java-Task3-ATMInterface](./Java-Task3-ATMInterface) |
+| 4 | Online Examination System | 🟨 In Progress | Java Swing, Timer | [Java-Task4-OnlineExaminationSystem](./Java-Task4-OnlineExaminationSystem) |
+| 5 | Digital Library Management System | ⬜ Not Started | Java Servlets/Spring Boot, MySQL | [Java-Task5-DigitalLibraryManagementSystem](./Java-Task5-DigitalLibraryManagementSystem) |
 
-> 🎯 **Completion Requirement:** Minimum **2 out of 5** tasks required — completing **4 tasks** for a stronger submission.
+> 🎯 **Completion Requirement:** Minimum **2 out of 5** tasks required — completing **all 5 tasks** for the strongest possible submission.
 
 ---
 
@@ -90,6 +94,8 @@ OIBSIP/
 ![JDBC](https://img.shields.io/badge/-JDBC-F29111?style=flat-square)
 ![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/-SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
+![SQL Server](https://img.shields.io/badge/-SQL%20Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/-Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
 ![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
 
 </div>
