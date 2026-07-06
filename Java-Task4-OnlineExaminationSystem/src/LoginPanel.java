@@ -3,7 +3,8 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 /**
- * Login screen: username + password. On success, hands off to the Profile screen.
+ * Login screen: username + password. On success, hands off to the Profile
+ * screen.
  */
 @SuppressWarnings("serial")
 public class LoginPanel extends JPanel {
@@ -60,11 +61,11 @@ public class LoginPanel extends JPanel {
         gbc.gridx = 0;
         gbc.gridwidth = 2;
         gbc.insets = new Insets(30, 10, 5, 10);
-        
+
         ModernButton loginButton = new ModernButton("Login", new Color(0, 120, 215), new Color(0, 90, 180));
         loginButton.setPreferredSize(new Dimension(150, 45));
         loginButton.addActionListener(e -> attemptLogin());
-        
+
         JPanel btnPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         btnPanel.setOpaque(false);
         btnPanel.add(loginButton);
