@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title} + ' | Digital Library'">Digital Library</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div th:fragment="nav">
+    <nav class="glass-nav">
+        <h2><span style="color: var(--primary);">Digital</span> Library</h2>
+        <div class="nav-links d-flex gap-1 align-center">
+            <th:block th:if="${session.user != null}">
+                <a th:if="${session.user.role == 'USER'}" th:href="@{/user/dashboard}" class="btn btn-secondary" style="padding: 0.5rem 1rem;">Dashboard</a>
+                <a th:if="${session.user.role == 'USER'}" th:href="@{/user/contact}" class="btn btn-secondary" style="padding: 0.5rem 1rem;">Contact Admin</a>
+                <a th:if="${session.user.role == 'ADMIN'}" th:href="@{/admin/dashboard}" class="btn btn-secondary" style="padding: 0.5rem 1rem;">Dashboard</a>
+                
+                <span style="margin: 0 10px; color: var(--text-muted); font-size: 0.9rem;" th:text="'Hello, ' + ${session.user.fullName}">Hello</span>
+                <a th:href="@{/logout}" class="btn btn-primary" style="padding: 0.5rem 1rem;">Logout</a>
+            </th:block>
+            <a th:if="${session.user == null}" th:href="@{/login}" class="btn btn-primary" style="padding: 0.5rem 1rem;">Login</a>
+        </div>
+    </nav>
+</div>
+
+</body>
+</html>

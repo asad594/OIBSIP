@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments :: head('Admin Dashboard')}"></head>
+<body>
+    <div th:replace="~{fragments :: nav}"></div>
+
+    <div class="container">
+        <h1 class="mb-2">Admin Dashboard</h1>
+
+        <div class="glass-panel mb-2">
+            <h3>Add New Book</h3>
+            <form th:action="@{/admin/add-book}" method="post" class="grid grid-2">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" name="title" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Author</label>
+                    <input type="text" name="author" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>ISBN</label>
+                    <input type="text" name="isbn" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <input type="text" name="category" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Total Quantity</label>
+                    <input type="number" name="totalQuantity" class="form-control" min="1" required>
+                </div>
+                <div class="form-group" style="display: flex; align-items: flex-end;">
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Add Book</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="grid grid-2">
+            <div class="glass-panel">
+                <h3>Manage Books</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Avail / Total</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="book : ${books}">
+                                <td th:text="${book.title}"></td>
+                                <td th:text="${book.availableQuantity} + ' / ' + ${book.totalQuantity}"></td>
+                                <td>
+                                    <form th:action="@{/admin/delete-book/{id}(id=${book.id})}" method="post" style="display:inline;">
+                                        <button type="submit" class="btn btn-danger" style="padding: 0.25rem 0.75rem; font-size: 0.875rem;">Del</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr th:if="${#lists.isEmpty(books)}">
+                                <td colspan="3" style="text-align: center; color: var(--text-muted);">No books found.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="glass-panel">
+                <h3>Issued Books & Fines</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Book</th>
+                                <th>User</th>
+                                <th>Status</th>
+                                <th>Fine</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="issue : ${issues}">
+                                <td th:text="${issue.book.title}"></td>
+                                <td th:text="${issue.user.username}"></td>
+                                <td>
+                                    <span th:if="${issue.status == 'ISSUED'}" class="badge badge-warning">Issued</span>
+                                    <span th:if="${issue.status == 'RETURNED'}" class="badge badge-success">Returned</span>
+                                </td>
+                                <td>
+                                    <span th:if="${issue.fineAmount > 0}" th:text="'₹' + ${issue.fineAmount}" style="color: var(--danger); font-weight: 600;"></span>
+                                    <span th:if="${issue.fineAmount == 0}">-</span>
+                                </td>
+                                <td>
+                                    <form th:if="${issue.fineAmount > 0 and !issue.finePaid}" th:action="@{/admin/pay-fine/{id}(id=${issue.id})}" method="post">
+                                        <button type="submit" class="btn btn-secondary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;">Mark Paid</button>
+                                    </form>
+                                    <span th:if="${issue.finePaid}" class="badge badge-success">Paid</span>
+                                </td>
+                            </tr>
+                            <tr th:if="${#lists.isEmpty(issues)}">
+                                <td colspan="5" style="text-align: center; color: var(--text-muted);">No issued books.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid grid-2 mt-2">
+            <div class="glass-panel">
+                <h3>Registered Members</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="u : ${users}">
+                                <td th:text="${u.fullName}"></td>
+                                <td th:text="${u.email}"></td>
+                                <td><span class="badge" th:classappend="${u.role == 'ADMIN' ? 'badge-danger' : 'badge-success'}" th:text="${u.role}"></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="glass-panel">
+                <h3>Contact Queries</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Message</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="query : ${queries}">
+                                <td th:text="${query.user.username}"></td>
+                                <td th:text="${query.message}"></td>
+                                <td th:text="${#temporals.format(query.createdAt, 'dd-MMM')}"></td>
+                            </tr>
+                            <tr th:if="${#lists.isEmpty(queries)}">
+                                <td colspan="3" style="text-align: center; color: var(--text-muted);">No queries.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

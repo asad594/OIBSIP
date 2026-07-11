@@ -16,29 +16,13 @@ A modern, robust, and visually stunning Online Train Reservation System built en
 
 ## 📸 Screenshots
 
-### 🔐 User Login
-![Login Screen](screenshots/LoginForm.jpeg)
-
-### 📝 User Registration
-![Registration Screen](screenshots/Register.jpeg)
-
-### 📊 Dashboard
-![Dashboard Screen](screenshots/Dashboard.jpeg)
-
-### 🚄 Ticket Reservation
-![Reservation Screen](screenshots/Reservation.jpeg)
-
-### ✅ Booking Confirmation
-![Booking Confirmation](screenshots/ConfirmReservation.jpeg)
-
-### 🔍 Ticket Cancellation
-![Cancellation Screen](screenshots/Cancel.jpeg)
-
-### ⚠️ Cancellation Confirmation
-![Cancellation Confirmation](screenshots/CancelConfirm.jpeg)
-
-### 🗑️ Ticket Cancelled
-![Ticket Cancelled](screenshots/TicketCancelled.jpeg)
+| Screen | Screen |
+|---|---|
+| ![User Login](./screenshots/LoginForm.jpeg) <br> **User Login Form** | ![User Registration](./screenshots/Register.jpeg) <br> **User Registration** |
+| ![Secure Login](./screenshots/Login.jpeg) <br> **Authentication Success** | ![Dashboard](./screenshots/Dashboard.jpeg) <br> **System Dashboard** |
+| ![Reservation](./screenshots/Reservation.jpeg) <br> **Ticket Reservation** | ![Confirm Reservation](./screenshots/ConfirmReservation.jpeg) <br> **Booking Confirmation** |
+| ![Cancel](./screenshots/Cancel.jpeg) <br> **Ticket Cancellation** | ![Cancel Confirm](./screenshots/CancelConfirm.jpeg) <br> **Cancellation Confirmation** |
+| ![Ticket Cancelled](./screenshots/TicketCancelled.jpeg) <br> **Ticket Successfully Cancelled** | ![Database Schema](./screenshots/Database.jpeg) <br> **Database Schema & Connections** |
 
 ---
 

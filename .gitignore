@@ -1,1 +1,11 @@
 *.class
+target/
+**/target/
+apache-maven-3.9.6/
+**/apache-maven-3.9.6/
+*.log
+.settings/
+.classpath
+.project
+.factorypath
+bin/
